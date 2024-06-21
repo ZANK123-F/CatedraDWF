@@ -1,0 +1,19 @@
+
+.main-content .card {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .main-content .col-md-3 {
+        flex: 0 0 25%;
+    }
+}
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}

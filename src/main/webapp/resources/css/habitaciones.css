@@ -1,0 +1,18 @@
+/* Estilos adicionales específicos para esta página */
+.habitacion {
+    margin-bottom: 30px;
+  }
+  .habitacion .card {
+    border: none;
+  }
+  .habitacion .card-body {
+    background-color: #f8f3e3; /* Color de fondo tipo amarillo dorado */
+  }
+  .habitacion .card-title {
+    color: #0077b6; /* Color celeste atardecer */
+  }
+  .habitacion .precio {
+    color: #ffa62b; /* Color amarillo dorado */
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }

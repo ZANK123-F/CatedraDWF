@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+    <f:metadata>
+        <f:event type="preRenderView" listener="#{reservaBean.cargarReserva()}" />
+    </f:metadata>
+    <title>Administración Hotel Intercontinental</title>
+    <h:outputStylesheet name="css/InicioAdmin.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</h:head>
+
+<h:body>
+    <h:form>
+        <header id="Inicio">
+            <div class="header-content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Administración Hotel Intercontinental</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Registro-Personas.xhtml">Registro de Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Registro-Habitación.xhtml">Registro de Habitaciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Registro-Reservas.xhtml">Registro de Reservas</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="faces/Index.xhtml">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container mt-5">
+            <div class="card mb-5">
+                <div class="card-header">
+                    <h5 class="card-title">Registro de Reservas</h5>
+                </div>
+                <div class="card-body">
+                    <h:form>
+                        <!-- Grupo: numerodehabitacion-->
+                        <div class="formulario__grupo" id="grupo__habitacion">
+                            <div class="col">
+                                <h:outputLabel styleClass="form-label" value="Numero de la habitacion"/>
+                                <h:selectOneMenu styleClass="form-control" value="#{reservaBean.habitacion.id}">
+                                    <f:selectItem itemValue="" itemLabel="Seleccione un tipo de habitacion"/>
+                                    <f:selectItems value="#{reservaBean.habitaciones}" var="habitaciones" itemValue="#{habitaciones.id}" itemLabel="#{habitaciones.numero}"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </div>
+
+                        <!-- Grupo: HABITACIÓN -->
+                        <div class="formulario__grupo" id="grupo__cliente">
+                            <div class="col">
+                                <h:outputLabel styleClass="form-label" value="clientes"/>
+                                <h:selectOneMenu styleClass="form-control" value="#{reservaBean.usuario.id}">
+                                    <f:selectItem itemValue="" itemLabel="Seleccione a el cliente"/>
+                                    <f:selectItems value="#{reservaBean.usuarios}" var="usuarios" itemValue="#{usuarios.id}" itemLabel="#{usuarios.nombres}"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </div>
+
+                        <!-- Grupo: TRABAJADOR -->
+                        <div class="formulario__grupo" id="grupo__trabajador">
+                            <div class="col">
+                                <h:outputLabel styleClass="form-label" value="Forma de pago"/>
+                                <h:selectOneMenu styleClass="form-control" value="#{reservaBean.formapago.id}">
+                                    <f:selectItem itemValue="" itemLabel="Seleccione un tipo de pago"/>
+                                    <f:selectItems value="#{reservaBean.formaPagos}" var="formapagos" itemValue="#{formapagos.id}" itemLabel="#{formapagos.nombre}"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </div>
+
+                        <!-- Grupo: FECHA DE ENTRADA
+                        <div class="formulario_grupo" id="grupo_entrada">
+                            <div class="col">
+                                <h:outputLabel  styleClass="formulario__label" value="Fecha de entrada:"/>
+                                <div class="formulario__grupo-input">
+                                    <h:inputText styleClass="form-control" value="#{reservaBean.reserva.horaEntrada}" ></h:inputText>
+                                </div>
+                            </div>
+                        </div>-->
+
+                      <!--   Grupo: FECHA DE SALIDA
+
+                        <div class="formulario_grupo" id="grupo_salida">
+                            <div class="col">
+                                <h:outputLabel  styleClass="formulario__label" value="Fecha de salida:"/>
+                                <div class="formulario__grupo-input">
+                                    <h:inputText styleClass="form-control" a:type="date" value="#{reservaBean.reserva.horaSalida}" converter="customDateConverter"></h:inputText>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <!-- Grupo: cantidad de personas -->
+                        <div class="formulario__grupo" id="grupo__numdocu">
+                            <div class="col">
+                                <h:outputLabel styleClass="formulario__label" value="cantidad de personas:"/>
+                                <h:inputText styleClass="form-control" value="#{reservaBean.reserva.cantidadPersonas}"/>
+                            </div>
+                        </div>
+
+                        <br/>
+                        <h:panelGrid columns="4">
+                            <h:commandButton styleClass="btn btn-primary center-block" value="Guardar" action="#{reservaBean.agregarReserva()}"/>
+
+                            <h:commandButton styleClass="btn btn-primary center-block" value="Consultar Reservas" action="#"/>
+                            <!-- Acciones para Eliminar y Actualizar -->
+                            <h:commandButton styleClass="btn btn-primary center-block" value="Eliminar" action="#"/>
+                            <h:commandButton styleClass="btn btn-primary center-block" value="Actualizar" action="#"/>
+                        </h:panelGrid>
+
+                        <br/>
+                        <h:dataTable styleClass="table table-striped" var="" value="#">
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Nombre del Cliente"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Nombre del Trabajador"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Tipo de Reserva"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Número de Habitación"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Precio Diario"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Estado de la habitación"/>
+                                </f:facet>
+                                <h:outputText value="#"/>
+                            </h:column>
+                        </h:dataTable>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <p>&copy; 2024 Hotel Intercontinental. Todos los derechos reservados.</p>
+            <p>Para más información, visita nuestro sitio web: <a href="https://www.hotelintercontinental.com">www.hotelintercontinental.com</a></p>
+        </footer>
+    </h:form>
+</h:body>
+</html>

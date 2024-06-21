@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        /* Agrega estilos personalizados aquí si es necesario */
+    </style>
+</h:head>
+<h:body>
+    <div class="container">
+        <h:form>
+            <h:panelGrid columns="2" class="form-group">
+                <h:outputLabel for="nombres" value="Nombres:" />
+                <h:inputText id="nombres" value="#{registroBean.usuario.nombres}" required="true" class="form-control" />
+                <h:outputLabel for="apellidos" value="Apellidos:" />
+                <h:inputText id="apellidos" value="#{registroBean.usuario.apellidos}" required="true" class="form-control" />
+                <h:outputLabel styleClass="formulario__label" value="Tipo de documento:"/>
+                <h:selectOneMenu styleClass="form-control" value="#{habitacionBean.tipoHabitacion.id}">
+                    <f:selectItem itemValue="" itemLabel="Seleccione un tipo de documento"/>
+                    <f:selectItems value="#{habitacionBean.tipoHabitaciones}" var="tipohabitaciones" itemValue="#{tipohabitaciones.id}" itemLabel="#{tipohabitaciones.nombre}"/>
+                </h:selectOneMenu>
+                <h:outputLabel for="numeroDocumento" value="Número de Documento:" />
+                <h:inputText id="numeroDocumento" value="#{registroBean.usuario.numeroDocumento}" required="true" class="form-control" />
+                <h:outputLabel for="direccion" value="Dirección:" />
+                <h:inputText id="direccion" value="#{registroBean.usuario.direccion}" required="true" class="form-control" />
+                <h:outputLabel for="telefono" value="Teléfono:" />
+                <h:inputText id="telefono" value="#{registroBean.usuario.telefono}" required="true" class="form-control" />
+                <h:outputLabel for="correo" value="Correo:" />
+                <h:inputText id="correo" value="#{registroBean.usuario.correo}" required="true" class="form-control" />
+                <h:outputLabel for="contrasenia" value="Contraseña:" />
+                <h:inputSecret id="contrasenia" value="#{registroBean.usuario.contrasenia}" required="true" class="form-control" />
+            </h:panelGrid>
+            <h:commandButton value="Registrarse" action="#{registroBean.registrarUsuario}" class="btn btn-primary" />
+            <h:messages />
+        </h:form>
+    </div>
+</h:body>
+</html>

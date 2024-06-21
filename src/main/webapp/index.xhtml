@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+
+
+    <title>Index</title>
+    <h:outputStylesheet name="css/css.css">
+
+    </h:outputStylesheet>
+
+    <h:outputScript name="js/js.js">
+
+    </h:outputScript>
+</h:head>
+
+<h:body>
+    <h:form>
+        <header id="Inicio">
+            <div class="header-content">
+                <div class="fondo">
+                    <h1 class="header-text">HOTEL INTERCONTINENTAL</h1>
+                </div>
+                <nav class="navbar">
+                    <h:graphicImage styleClass="logo" library="img" name="hotel.png" alt="Logo" />
+
+                    <ul class="menu">
+                        <li class="menu-item"><a class="menu-link" href="#Inicio">Inicio</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#Acerca">Acerca de</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#habitaciones">Habitaciones</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#Suites">Suites</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#Contacto">Contacto</a></li>
+                        <li class="menu-item"><button><a class="menu-link" href="Productos.xhtml">Prodcutos</a></button></li>
+                        <li class="menu-item"><button><a class="menu-link" href="Login.xhtml">Registrarse</a></button></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <h1>!Bienvenido al Hotel Intercontinental¡</h1>
+            <hr />
+            <p>Sumérgete en la comodidad y el lujo en nuestro oasis urbano. Ubicado en el corazón de la ciudad, nuestro
+                hotel ofrece una experiencia inolvidable para todos nuestros huéspedes. Desde la elegante arquitectura hasta
+                el impecable servicio, cada detalle ha sido diseñado para garantizar una estancia excepcional.</p>
+
+            <h3>Acerca de</h3>
+            <hr />
+
+            <div class="acerca" id="Acerca">
+                <div class="info">
+                    <p>Este lujoso hotel de San Salvador está ubicado en el corazón de la zona de entretenimiento y negocios de la ciudad junto al Metrocentro San Salvador, el centro comercial más grande de Centroamérica. Para garantizar su comodidad, todas nuestras habitaciones cuentan con ventanas a prueba de sonido y acceso a internet de alta velocidad. Disfrute de nuestra amplia selección de restaurantes y lounges, manténgase en forma en nuestro gimnasio y relájese en nuestro Spa InterContinental.</p>
+                </div>
+                <div class="img">
+                    <h:graphicImage styleClass="imagen" library="img" name="imagen01.avif" alt="Logo" />
+
+                </div>
+            </div>
+
+            <h3>Habitaciones</h3>
+            <hr />
+
+            <div class="promos" id="habitaciones">
+                <h:outputLink value="registrarse.xhtml">
+                    <div class="card">
+                        <div class="image-box">
+                            <h:graphicImage styleClass="habitacion" library="img" name="habitacion01.avif" alt="Logo" />
+
+                        </div>
+                        <div class="content">
+                            <h2>Habitaciones Classic</h2>
+                            <p>
+                                <b>Tamaño de la habitación:</b> 30 sq. m. – 30 sq. m.<br />
+                                <b>Camas:</b> 1 King Bed<br />
+                                <b>Classic Habitaciones puede incluir:</b> Lounge Access
+                            </p>
+                        </div>
+                    </div>
+                </h:outputLink>
+                <h:outputLink value="registrarse.xhtml">
+                    <div class="card">
+                        <div class="image-box">
+                            <h:graphicImage styleClass="habitacion" library="img" name="habitacion02.webp" alt="Logo" />
+
+                        </div>
+                        <div class="content">
+                            <h2>Habitaciones Deluxe Doble</h2>
+                            <p>
+                                <b>Tamaño de la habitación:</b> 50 sq. m. – 50 sq. m.<br />
+                                <b>Camas:</b> 2 Double Beds, o 1 King Bed<br />
+                                <b>Habitaciones Deluxe Doble puede incluir:</b> Lounge Access
+                            </p>
+                        </div>
+                    </div>
+                </h:outputLink>
+            </div>
+            <br />
+            <br />
+
+            <h3>Suites</h3>
+            <hr />
+
+            <div class="promos" id="Suites">
+                <h:outputLink value="registrarse.xhtml">
+                    <div class="card">
+                        <div class="image-box">
+                            <h:graphicImage styleClass="habitacion" library="img" name="habitacion03.webp" alt="Logo" />
+
+                        </div>
+                        <div class="content">
+                            <h2>Suite 1</h2>
+                            <p>
+                                <b>Tamaño de la habitación:</b> 90 sq. m. – 90 sq. m.<br />
+                                <b>Camas:</b> 2 King Bed<br />
+                                <b>Suite 1 puede incluir:</b> Lounge Access
+                            </p>
+                        </div>
+                    </div>
+                </h:outputLink>
+                <h:outputLink value="registrarse.xhtml">
+                    <div class="card">
+                        <div class="image-box">
+                            <h:graphicImage styleClass="habitacion" library="img" name="habitacion04.webp" alt="Logo" />
+
+                        </div>
+                        <div class="content">
+                            <h2>Junior Suite</h2>
+                            <p>
+                                <b>Tamaño de la habitación:</b> 60 sq. m. – 60 sq. m.<br />
+                                <b>Camas:</b> 1 King Bed<br />
+                                <b>Junior Suite puede incluir:</b> Lounge Access
+                            </p>
+                        </div>
+                    </div>
+                </h:outputLink>
+            </div>
+
+            <h3>Contacto</h3>
+            <hr />
+
+            <div class="contact-form" id="Contacto">
+                <h:panelGrid columns="2">
+                    <h:outputLabel for="nombre" value="Nombre:" />
+                    <h:inputText id="nombre" required="true" />
+
+                    <h:outputLabel for="email" value="Email:" />
+                    <h:inputText id="email" required="true" />
+
+                    <h:outputLabel for="mensaje" value="Mensaje:"/>
+                    <h:inputText id="mensaje" required="true" />
+
+                    <h:commandButton value="Enviar" action="enviarMensaje" />
+                </h:panelGrid>
+            </div>
+
+            <footer>
+                <p>&copy; 2024 Hotel Intercontinental. Todos los derechos reservados.</p>
+                <p>Para más información, visita nuestro sitio web: <a href="https://www.hotelintercontinental.com">www.hotelintercontinental.com</a></p>
+            </footer>
+        </div>
+    </h:form>
+
+
+</h:body>
+</html>
+

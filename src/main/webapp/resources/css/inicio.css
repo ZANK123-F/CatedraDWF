@@ -1,0 +1,87 @@
+/* Estilos para el cuerpo del documento */
+body {
+  background-color: #f8f3e3; /* Color de fondo tipo amarillo dorado */
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card-header {
+  background-color: #0077b6; /* Color celeste atardecer */
+  color: #fff;
+  padding: 10px;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+/* Estilos para los campos de entrada */
+.form-control {
+  border: 1px solid #ced4da;
+}
+
+/* Estilos para los botones */
+.btn-primary {
+  background-color: #ffa62b; /* Color amarillo dorado */
+  border-color: #ffa62b;
+}
+
+.btn-primary:hover {
+  background-color: #cc7e0b; /* Color amarillo dorado más oscuro al pasar el cursor */
+  border-color: #cc7e0b;
+}
+
+/* Estilos para las tarjetas */
+.card {
+  height: 100%;
+}
+
+/* Estilos para el navbar */
+nav.navbar {
+  background-color: #ffffff; /* Color de fondo del navbar */
+  border-bottom: 1px solid rgba(0,0,0,.1); /* Borde inferior */
+}
+
+nav.navbar a.navbar-brand {
+  color: #000000; /* Color del texto del navbar-brand */
+  font-weight: bold;
+}
+
+nav.navbar a.navbar-brand:hover {
+  color: #0056b3; /* Color del texto del navbar-brand al pasar el cursor */
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+  color: #000000; /* Color del texto de los enlaces del navbar */
+}
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
+  color: #0056b3; /* Color del texto de los enlaces del navbar al pasar el cursor */
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #fff; /* Color de fondo del footer */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior */
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

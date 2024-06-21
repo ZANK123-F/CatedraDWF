@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Administración Hotel Intercontinental</title>
+    <h:outputStylesheet name="css/InicioAdmin.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+</h:head>
+
+<h:body>
+    <h:form>
+        <header id="Inicio">
+            <div class="header-content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="indexAdmin.xhtml">Administración Hotel Intercontinental</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <h:link outcome="Registro-Personas.xhtml" value="Registro de Clientes" styleClass="nav-link"/>
+                            </li>
+                            <li class="nav-item">
+                                <h:link outcome="Registro-Habitación.xhtml" value="Registro de Habitaciones" styleClass="nav-link"/>
+                            </li>
+                            <li class="nav-item">
+                                <h:link outcome="Registro-Reservas.xhtml" value="Registro de Reservas" styleClass="nav-link"/>
+                            </li>
+                            <li class="nav-item">
+                                <h:link outcome="faces/Index.xhtml" value="Cerrar Sesión" styleClass="nav-link"/>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container mt-5">
+            <div class="card mb-5">
+                <div class="card-header">
+                    <h5 class="card-title">Bienvenido a la Administración del Hotel Intercontinental</h5>
+                </div>
+                <div class="card-body">
+                    <div class="image-container">
+                        <img src="https://www.anmosugoi.com/wp-content/uploads/2023/10/Re-Zero-Rem-min.webp" alt="Imagen decorativa"/>
+                        <p>Bienvenido a la administración del Hotel Intercontinental. Nos complace ofrecerle un entorno de gestión eficiente y profesional, asegurando que cada cliente y cada reserva se manejen con la máxima atención y cuidado.</p>
+                        <div class="btn-group">
+                            <h:commandLink value="Registro de Clientes" action="Registro-Personas.xhtml" styleClass="btn btn-primary"/>
+                            <h:commandLink value="Registro de Habitaciones" action="Registro-Habitación.xhtml" styleClass="btn btn-primary"/>
+                            <h:commandLink value="Registro de Reservas" action="Registro-Reservas.xhtml" styleClass="btn btn-primary"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-5">
+            <p>&copy; 2024 Hotel Intercontinental. Todos los derechos reservados.</p>
+            <p>Para más información, visita nuestro sitio web: <a href="https://www.hotelintercontinental.com">www.hotelintercontinental.com</a></p>
+        </footer>
+    </h:form>
+</h:body>
+</html>
+
+
+
+
+
